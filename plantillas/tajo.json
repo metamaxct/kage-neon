@@ -1,15 +1,134 @@
 {
  "celda": [
-  52,
-  52
+  96,
+  88
  ],
+ "columnas": 16,
+ "total": 20,
  "ancla": [
-  6,
-  30
+  40,
+  80
  ],
- "fotogramas": [
-  "a",
-  "b",
-  "c"
+ "animaciones": [
+  {
+   "anim": "A0",
+   "desde": 0,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "A1",
+   "desde": 1,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "A2",
+   "desde": 2,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "A3",
+   "desde": 3,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "A4",
+   "desde": 4,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "B0",
+   "desde": 5,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "B1",
+   "desde": 6,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "B2",
+   "desde": 7,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "B3",
+   "desde": 8,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "B4",
+   "desde": 9,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "C0",
+   "desde": 10,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "C1",
+   "desde": 11,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "C2",
+   "desde": 12,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "C3",
+   "desde": 13,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "C4",
+   "desde": 14,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "L0",
+   "desde": 15,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "L1",
+   "desde": 16,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "L2",
+   "desde": 17,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "L3",
+   "desde": 18,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "L4",
+   "desde": 19,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  }
  ]
 }

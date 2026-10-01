@@ -1,21 +1,63 @@
 {
  "celda": [
-  56,
-  56
+  96,
+  88
  ],
+ "columnas": 16,
+ "total": 135,
  "ancla": [
-  28,
-  53
+  48,
+  84
  ],
- "fotogramas": [
-  "i0",
-  "w0",
-  "w1",
-  "w2",
-  "w3",
-  "p1",
-  "p2",
-  "hurt",
-  "dead"
+ "animaciones": [
+  {
+   "anim": "idle",
+   "desde": 0,
+   "fotogramas": 20,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "walk",
+   "desde": 20,
+   "fotogramas": 16,
+   "bucle": true
+  },
+  {
+   "anim": "punch",
+   "desde": 36,
+   "fotogramas": 19,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "punch2",
+   "desde": 55,
+   "fotogramas": 19,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "taunt",
+   "desde": 74,
+   "fotogramas": 24,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "hurt",
+   "desde": 98,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "die",
+   "desde": 108,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "dieSlash",
+   "desde": 121,
+   "fotogramas": 14,
+   "ticks_por_fotograma": 2
+  }
  ]
 }

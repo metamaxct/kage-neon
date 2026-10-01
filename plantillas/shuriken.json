@@ -1,14 +1,38 @@
 {
  "celda": [
-  9,
-  9
+  11,
+  11
  ],
+ "columnas": 16,
+ "total": 4,
  "ancla": [
-  4,
-  4
+  5,
+  5
  ],
- "fotogramas": [
-  "a",
-  "b"
+ "animaciones": [
+  {
+   "anim": "a",
+   "desde": 0,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "b",
+   "desde": 1,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "c",
+   "desde": 2,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  },
+  {
+   "anim": "d",
+   "desde": 3,
+   "fotogramas": 1,
+   "ticks_por_fotograma": 1
+  }
  ]
 }

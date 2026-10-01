@@ -1,21 +1,87 @@
 {
  "celda": [
-  56,
-  56
+  96,
+  88
  ],
+ "columnas": 16,
+ "total": 136,
  "ancla": [
-  28,
-  53
+  48,
+  84
  ],
- "fotogramas": [
-  "i0",
-  "aim",
-  "caim",
-  "w0",
-  "w1",
-  "w2",
-  "w3",
-  "hurt",
-  "dead"
+ "animaciones": [
+  {
+   "anim": "idle",
+   "desde": 0,
+   "fotogramas": 21,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "walk",
+   "desde": 21,
+   "fotogramas": 16,
+   "bucle": true
+  },
+  {
+   "anim": "aim",
+   "desde": 37,
+   "fotogramas": 6,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "shoot",
+   "desde": 43,
+   "fotogramas": 7,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "lower",
+   "desde": 50,
+   "fotogramas": 6,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "caim",
+   "desde": 56,
+   "fotogramas": 7,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "cshoot",
+   "desde": 63,
+   "fotogramas": 7,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "cstand",
+   "desde": 70,
+   "fotogramas": 6,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "reload",
+   "desde": 76,
+   "fotogramas": 23,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "hurt",
+   "desde": 99,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "die",
+   "desde": 109,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "dieSlash",
+   "desde": 122,
+   "fotogramas": 14,
+   "ticks_por_fotograma": 2
+  }
  ]
 }

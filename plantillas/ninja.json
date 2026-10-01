@@ -1,41 +1,166 @@
 {
  "celda": [
-  64,
-  64
+  96,
+  88
  ],
+ "columnas": 16,
+ "total": 312,
  "ancla": [
-  32,
-  60
+  48,
+  84
  ],
- "fotogramas": [
-  "i0",
-  "i1",
-  "w0",
-  "w1",
-  "w2",
-  "w3",
-  "w4",
-  "w5",
-  "crouch",
-  "j0",
-  "j1",
-  "j2",
-  "j3",
-  "air",
-  "t1",
-  "t2",
-  "ct1",
-  "ct2",
-  "at",
-  "atd",
-  "s1",
-  "s2",
-  "s3",
-  "cs1",
-  "cs2",
-  "guard",
-  "magic",
-  "hurt",
-  "dead"
+ "animaciones": [
+  {
+   "anim": "idle",
+   "desde": 0,
+   "fotogramas": 23,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "run",
+   "desde": 23,
+   "fotogramas": 16,
+   "bucle": true
+  },
+  {
+   "anim": "turn",
+   "desde": 39,
+   "fotogramas": 6,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "skid",
+   "desde": 45,
+   "fotogramas": 8,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "crouchDown",
+   "desde": 53,
+   "fotogramas": 4,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "crouch",
+   "desde": 57,
+   "fotogramas": 20,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "standUp",
+   "desde": 77,
+   "fotogramas": 4,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "rise",
+   "desde": 81,
+   "fotogramas": 3,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "fall",
+   "desde": 84,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2,
+   "bucle": true
+  },
+  {
+   "anim": "land",
+   "desde": 94,
+   "fotogramas": 7,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "flip",
+   "desde": 101,
+   "fotogramas": 24
+  },
+  {
+   "anim": "throw",
+   "desde": 125,
+   "fotogramas": 12,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "cthrow",
+   "desde": 137,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "athrow",
+   "desde": 147,
+   "fotogramas": 9,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "athrowd",
+   "desde": 156,
+   "fotogramas": 9,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slashA",
+   "desde": 165,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slashB",
+   "desde": 178,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slashC",
+   "desde": 191,
+   "fotogramas": 16,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "cslash",
+   "desde": 207,
+   "fotogramas": 11,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "aslash",
+   "desde": 218,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "guard",
+   "desde": 228,
+   "fotogramas": 16,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "hurt",
+   "desde": 244,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "die",
+   "desde": 254,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "dieSlash",
+   "desde": 267,
+   "fotogramas": 14,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "magic",
+   "desde": 281,
+   "fotogramas": 31,
+   "ticks_por_fotograma": 2
+  }
  ]
 }

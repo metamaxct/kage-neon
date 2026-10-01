@@ -9,12 +9,13 @@ const base = process.argv[2] || 'http://localhost:8000/';
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
 const page = await browser.newPage();
 await page.goto(base + 'index.html?test');
+await page.waitForFunction(() => window.KAGE && window.KAGE.sheet, null, { timeout: 60000 });
 mkdirSync('plantillas', { recursive: true });
 const names = await page.evaluate(() => Object.keys(KAGE.SETS));
 for (const n of names) {
   const s = await page.evaluate(n => KAGE.sheet(n), n);
   writeFileSync(`plantillas/${n}.png`, Buffer.from(s.url.split(',')[1], 'base64'));
-  writeFileSync(`plantillas/${n}.json`, JSON.stringify({ celda: [s.w, s.h], ancla: [s.ax, s.ay], fotogramas: s.frames }, null, 1) + '\n');
-  console.log(n, `${s.w}x${s.h}`, s.frames.length, 'fotogramas');
+  writeFileSync(`plantillas/${n}.json`, JSON.stringify({ celda: [s.w, s.h], columnas: s.cols, total: s.n, ancla: [s.ax, s.ay], animaciones: s.anims }, null, 1) + '\n');
+  console.log(n, `${s.w}x${s.h}`, s.n, 'fotogramas');
 }
 await browser.close();
