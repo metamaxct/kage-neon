@@ -1,0 +1,33 @@
+{
+ "celda": [
+  80,
+  80
+ ],
+ "columnas": 16,
+ "total": 47,
+ "ancla": [
+  40,
+  76
+ ],
+ "animaciones": [
+  {
+   "anim": "tied",
+   "desde": 0,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "free",
+   "desde": 13,
+   "fotogramas": 22,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "walk",
+   "desde": 35,
+   "fotogramas": 12,
+   "bucle": true
+  }
+ ]
+}

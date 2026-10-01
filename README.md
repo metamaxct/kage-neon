@@ -2,7 +2,7 @@
 
 Juego de acción ninja en 2D con estética arcade **System 16** (Sega, finales de los 80) y ambientación urbana nocturna. Se juega en el navegador y es un único `index.html`, sin dependencias ni conexión a internet.
 
-> **Estado:** prototipo 0.2, con la **Fase 1, sección 1-1 "Los Muelles"** completa y jugable de principio a fin.
+> **Estado:** prototipo 0.3: **5 fases completas, cada una con su jefe**, jugables de principio a fin.
 
 ## Cómo jugar
 
@@ -23,12 +23,13 @@ python3 -m http.server 8000
 | Subir de piso | Arriba + Salto | | |
 | Bajar de piso | Abajo + Salto | | |
 | Ninjutsu (una vez por vida) | C o L | B / Círculo (o LB) | NINJ |
-| Pausa | Enter, Esc o P | Start | II |
+| Pausa (continuar, música, volver al menú principal) | Enter, Esc o P | Start | II |
 | Música sí/no · tipo de pantalla (TV / Arcade / Píxel) | M · V | | |
 
-En salto, mantener **Abajo** al atacar lanza el shuriken en diagonal hacia abajo.
+Los shurikens y las balas viajan siempre en horizontal: ante una bala alta, agáchate; ante una baja, salta.
 
 ### Opciones del menú
+- **Fase**: empieza desde cualquiera de las 5 fases.
 - **Modo Normal**: 4 impactos por vida.
 - **Modo Arcade**: un impacto y mueres, como el Shinobi original.
 - **Pantalla**:
@@ -36,16 +37,25 @@ En salto, mantener **Abajo** al atacar lanza el shuriken en diagonal hacia abajo
   - **Arcade**: monitor de recreativa, más nítido.
   - **Píxel**: píxeles limpios.
 
-### Misión de la sección 1-1
-Desactiva las **3 bombas** del muelle (dos están en el piso superior) y sal por el portón **SALIDA** antes de que acabe el tiempo (3:00).
+### Las fases
+
+| # | Fase | Misión | Enemigos | Jefe |
+|---|---|---|---|---|
+| 1 | **Los Muelles**: puerto de noche, lluvia y rayos | Desactivar 3 bombas | Matones, pistoleros, ninjas rojos | **Toro**: embiste, da puñetazos, salta con onda expansiva y lanza barriles |
+| 2 | **Ciudad**: distrito de neón, tren elevado, vapor de alcantarillas | Desactivar 3 bombas | Matones punk, pistoleros, ninjas | **Metralla**: ráfagas altas (agáchate) y bajas (salta), granadas |
+| 3 | **El Bosque**: bambú, torii, puentes colgantes, luciérnagas | Liberar 3 rehenes | Bandidos, ninjas verdes y negros | **Oni**: mazazo, barrido bajo, salto aplastante y lluvia de rocas |
+| 4 | **La Mansión**: jardín japonés, tejados, sakura | Desactivar 3 bombas | Guardias samurái, ninjas negros | **Shogun**: bloquea de frente y lanza un tajo iai a toda velocidad |
+| 5 | **El Salón**: interior con fusuma dorados, velas y altillos | Liberar 3 rehenes | Samuráis y ninjas | **Maestro Garra**: teletransporte, abanicos de shuriken, clones y, a media vida, onda de fuego |
+
+En cada fase hay que cumplir la misión para que se abra la puerta de la arena del jefe. Al vencerlo se pasa a la siguiente fase; tras la quinta, el final.
 
 ## Qué incluye el prototipo
 
 - **Gráficos al estilo 16 bits**:
   - **Personajes**: unos 55 px de alto, con volúmenes sombreados en 5 tonos con desplazamiento de matiz, contornos de color y caras con ojos, nariz y gafas.
   - **Pantalla**: simulación de televisor de tubo en WebGL (opción TV por defecto).
-- **Animación fluida** con más de 860 fotogramas en total, interpolados entre poses clave:
-  - **Movimiento**: pies que apoyan sin patinar (cinemática inversa), carrera, giro, frenada, aterrizaje, voltereta completa de 24 fotogramas y bufanda con física en tiempo real.
+- **Animación fluida** con casi 2.300 fotogramas en total, interpolados entre poses clave:
+  - **Movimiento**: pies que apoyan sin patinar (cinemática inversa), sprint inclinado con estela de velocidad, giro, frenada, aterrizaje, voltereta completa de 24 fotogramas y bufanda con física en tiempo real.
   - **Ninja**: 3 lanzamientos de shuriken y un combo de espada de 3 golpes con estelas, más espadazo agachado, en el aire y ninjutsu.
   - **Enemigos**:
     - **Matón**: guardia de boxeo, directo, cruzado y burla.
@@ -54,10 +64,16 @@ Desactiva las **3 bombas** del muelle (dos están en el piso superior) y sal por
   - **Muertes**: dos tipos (sale despedido o se desploma tras un corte).
   - **Detalles**: polvo al correr y aterrizar, y sombras en el suelo.
 - **Motor**: paso de tiempo fijo a 60 fps y resolución interna 320×224.
-- **Escenario**:
-  - Fondos: cielo con luna, nubes, ciudad lejana y puerto con grúas y barcos en parallax.
-  - Efectos: agua ondulando línea a línea, lluvia con salpicaduras, rayos con trueno, neones que parpadean y farolas.
-- **Música**: *"Muelle 9"*, funk-fusión en La menor a 138 bpm, unos 87 s antes de repetirse.
+- **5 escenarios** con 3 capas de parallax cada uno y efectos propios:
+  - Lluvia y rayos en los muelles, llovizna, tren elevado y vapor en la ciudad.
+  - Hojas y luciérnagas en el bosque, pétalos de sakura en la mansión, polvo y velas en el salón.
+- **Música**: un tema por fase y otro para los jefes:
+  - *Muelle 9* (funk-fusión, 138 bpm)
+  - *Neón 24* (148 bpm)
+  - *Senda de bambú* (flauta y taikos, 118 bpm)
+  - *Jardín de la luna* (koto, 128 bpm)
+  - *Salón de las sombras* (Do menor, 136 bpm)
+  - *Duelo* (jefes, 158 bpm)
   - **Estructura**: intro, tema, tema con armonía y arpegios, puente a medio tiempo, break de bajo slap, solo, tema un tono más arriba y remate al unísono.
   - **Sonido**: síntesis FM al estilo YM2151, con eco en la melodía, reverberación, redobles de batería y platos.
   - **Efectos**: unos 25 efectos de sonido.
@@ -74,11 +90,10 @@ Todos los gráficos se generan por código (esqueletos animados rasterizados com
 |---|---|---|
 | 1 | Prototipo: movimiento, armas, 3 enemigos, sección 1-1 | ✅ |
 | 1b | Gráficos 16 bits, pantalla de TV, animación fluida y música nueva | ✅ |
-| 2 | Fase 1 completa: sección 1-2 + jefe **Toro** | ⏳ |
-| 3 | Fases 2–3 (Línea 9, Barrio Neón), bonus de shurikens, 3 ninjutsu | |
-| 4 | Fases 4–6 (La Obra, Planta Química, Torre Garra) y final | |
-| 5 | Pulido: música de cada fase, modo demo, ranking, dificultad | |
-| 6 | Publicación en itch.io y tráiler | |
+| 2 | 5 fases con jefe, rehenes, samuráis, música por fase, menú de pausa | ✅ |
+| 3 | Bonus de shurikens entre fases, 3 ninjutsu distintos, más variedad de enemigos | |
+| 4 | Pulido: equilibrado de dificultad, modo demo, ranking | |
+| 5 | Publicación en itch.io y tráiler | |
 
 ## Herramientas
 

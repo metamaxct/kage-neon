@@ -1,0 +1,166 @@
+{
+ "celda": [
+  144,
+  120
+ ],
+ "columnas": 16,
+ "total": 322,
+ "ancla": [
+  72,
+  116
+ ],
+ "animaciones": [
+  {
+   "anim": "idle",
+   "desde": 0,
+   "fotogramas": 20,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "run",
+   "desde": 20,
+   "fotogramas": 16,
+   "bucle": true
+  },
+  {
+   "anim": "turn",
+   "desde": 36,
+   "fotogramas": 6,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "skid",
+   "desde": 42,
+   "fotogramas": 8,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "crouchDown",
+   "desde": 50,
+   "fotogramas": 4,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "crouch",
+   "desde": 54,
+   "fotogramas": 20,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "standUp",
+   "desde": 74,
+   "fotogramas": 4,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "rise",
+   "desde": 78,
+   "fotogramas": 3,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "fall",
+   "desde": 81,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2,
+   "bucle": true
+  },
+  {
+   "anim": "land",
+   "desde": 91,
+   "fotogramas": 7,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "flip",
+   "desde": 98,
+   "fotogramas": 24
+  },
+  {
+   "anim": "throw",
+   "desde": 122,
+   "fotogramas": 12,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "cthrow",
+   "desde": 134,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "athrow",
+   "desde": 144,
+   "fotogramas": 9,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "athrowd",
+   "desde": 153,
+   "fotogramas": 9,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slashA",
+   "desde": 162,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slashB",
+   "desde": 175,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slashC",
+   "desde": 188,
+   "fotogramas": 16,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "cslash",
+   "desde": 204,
+   "fotogramas": 11,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "aslash",
+   "desde": 215,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "guard",
+   "desde": 225,
+   "fotogramas": 21,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "hurt",
+   "desde": 246,
+   "fotogramas": 10,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "die",
+   "desde": 256,
+   "fotogramas": 21,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "dieSlash",
+   "desde": 277,
+   "fotogramas": 14,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "iai",
+   "desde": 291,
+   "fotogramas": 31,
+   "ticks_por_fotograma": 2
+  }
+ ]
+}

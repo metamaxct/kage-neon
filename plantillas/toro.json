@@ -1,0 +1,76 @@
+{
+ "celda": [
+  160,
+  136
+ ],
+ "columnas": 16,
+ "total": 175,
+ "ancla": [
+  80,
+  132
+ ],
+ "animaciones": [
+  {
+   "anim": "idle",
+   "desde": 0,
+   "fotogramas": 20,
+   "ticks_por_fotograma": 3,
+   "bucle": true
+  },
+  {
+   "anim": "walk",
+   "desde": 20,
+   "fotogramas": 16,
+   "bucle": true
+  },
+  {
+   "anim": "charge",
+   "desde": 36,
+   "fotogramas": 12,
+   "bucle": true
+  },
+  {
+   "anim": "punch",
+   "desde": 48,
+   "fotogramas": 23,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "slam",
+   "desde": 71,
+   "fotogramas": 39,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "lift",
+   "desde": 110,
+   "fotogramas": 13,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "throwB",
+   "desde": 123,
+   "fotogramas": 12,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "stun",
+   "desde": 135,
+   "fotogramas": 16,
+   "ticks_por_fotograma": 2,
+   "bucle": true
+  },
+  {
+   "anim": "hurt",
+   "desde": 151,
+   "fotogramas": 6,
+   "ticks_por_fotograma": 2
+  },
+  {
+   "anim": "die",
+   "desde": 157,
+   "fotogramas": 18,
+   "ticks_por_fotograma": 2
+  }
+ ]
+}

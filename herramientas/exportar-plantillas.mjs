@@ -11,7 +11,7 @@ const page = await browser.newPage();
 await page.goto(base + 'index.html?test');
 await page.waitForFunction(() => window.KAGE && window.KAGE.sheet, null, { timeout: 60000 });
 mkdirSync('plantillas', { recursive: true });
-const names = await page.evaluate(() => Object.keys(KAGE.SETS));
+const names = await page.evaluate(() => KAGE.sets());
 for (const n of names) {
   const s = await page.evaluate(n => KAGE.sheet(n), n);
   writeFileSync(`plantillas/${n}.png`, Buffer.from(s.url.split(',')[1], 'base64'));

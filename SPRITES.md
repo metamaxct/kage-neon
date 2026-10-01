@@ -10,7 +10,7 @@ Cada personaje es un **esqueleto** (cadera, torso, cabeza, brazos y piernas) que
 - **Color:** **rampas de 5 tonos** por material, con desplazamiento de matiz (sombras hacia el azul, luces hacia el amarillo).
 - **Acabado:** tramado ordenado y **contorno del color del material**, al estilo de los arcades de 16 bits.
 
-Resultado: **ninja 312 fotogramas**, ninja rojo 281, matón 135 y pistolero 136. La bufanda del ninja no está en la hoja: se simula en tiempo real con física.
+En total hay casi 2.300 fotogramas entre el ninja, 5 tipos de enemigo, los rehenes y los 5 jefes. La bufanda del ninja no está en la hoja: se simula en tiempo real con física.
 
 ## Cómo sustituirlos
 
@@ -23,21 +23,30 @@ Resultado: **ninja 312 fotogramas**, ninja rojo 281, matón 135 y pistolero 136.
 ## Formato de la hoja
 
 - **Rejilla de 16 columnas**: el fotograma *n* está en la columna `n % 16`, fila `floor(n / 16)`.
-- **Celda de 96×88**: el **ancla** (punto entre los pies, apoyado en el suelo) está en el píxel **48,84** de cada celda.
+- **Celda y ancla** según la tabla de abajo (el ancla es el punto entre los pies, apoyado en el suelo).
 - PNG con **transparencia**. Personajes **mirando a la derecha**; el juego los voltea solo.
 - En `plantillas/<nombre>.json` está cada animación: en qué fotograma empieza, cuántos tiene, a qué velocidad va y si se repite en bucle.
 
-| Nombre | Hoja | Fotogramas | Qué es |
-|---|---|---|---|
-| `ninja` | 1536×1760 | 312 | Protagonista |
-| `rojo` | 1536×1584 | 281 | Ninja enemigo (mismas animaciones salvo `magic`) |
-| `maton` | 1536×792 | 135 | Matón |
-| `pistolero` | 1536×792 | 136 | Pistolero |
-| `shuriken` | 44×11 | 4 | Shuriken girando |
-| `tajo` | 1536×176 | 20 | Estelas de la espada (A, B, C, bajo; 5 fotogramas cada una) |
+Cada juego de sprites tiene su propio tamaño de celda y ancla:
+
+| Nombre | Celda | Ancla | Hoja | Fotogramas | Qué es |
+|---|---|---|---|---|---|
+| `ninja` | 96×88 | 48,84 | 1536×1760 | 312 | Protagonista |
+| `rojo` | 96×88 | 48,84 | 1536×1584 | 281 | Ninja enemigo (paletas rojo, negro, verde) |
+| `maton` | 96×88 | 48,84 | 1536×792 | 135 | Matón (paletas punk, verde, bandido) |
+| `pistolero` | 96×88 | 48,84 | 1536×792 | 136 | Pistolero |
+| `samurai` | 96×96 | 48,92 | 1536×1728 | 283 | Guardia samurái |
+| `rehen` | 80×80 | 40,76 | 1280×240 | 47 | Rehén (atado, liberado, huyendo) |
+| `toro` | 160×136 | 80,132 | 2560×1496 | 175 | Jefe 1: Toro |
+| `metralla` | 144×120 | 64,116 | 2304×720 | 91 | Jefe 2: Metralla |
+| `oni` | 176×152 | 88,148 | 2816×1672 | 170 | Jefe 3: Oni |
+| `shogun` | 144×120 | 72,116 | 2304×2520 | 322 | Jefe 4: Shogun |
+| `garra` | 112×104 | 56,100 | 1792×2080 | 312 | Jefe 5: Maestro Garra |
+| `shuriken` | 11×11 | 5,5 | 44×11 | 4 | Shuriken girando |
+| `tajo` | 96×88 | 40,80 | 1536×176 | 20 | Estelas de espada |
 
 ### Animaciones del ninja
-`idle` (respiración) · `run` (carrera, se sincroniza con la distancia recorrida) · `turn` (giro) · `skid` (frenada) · `crouchDown` / `crouch` / `standUp` · `rise` (impulso) · `fall` (caída) · `land` (aterrizaje) · `flip` (voltereta: 24 fotogramas de 15° cada uno, se elige por ángulo) · `throw` / `cthrow` / `athrow` / `athrowd` (lanzar shuriken de pie, agachado, en el aire y en diagonal) · `slashA` / `slashB` / `slashC` (combo de espada de 3 golpes) · `cslash` (espadazo agachado) · `aslash` (en el aire) · `guard` (bloqueo) · `hurt` · `die` (sale despedido) · `dieSlash` (se desploma tras un corte) · `magic` (ninjutsu)
+`idle` (respiración) · `run` (sprint inclinado hacia delante, se sincroniza con la distancia recorrida) · `turn` (giro) · `skid` (frenada) · `crouchDown` / `crouch` / `standUp` · `rise` (impulso) · `fall` (caída) · `land` (aterrizaje) · `flip` (voltereta: 24 fotogramas de 15° cada uno, se elige por ángulo) · `throw` / `cthrow` / `athrow` / `athrowd` (lanzar shuriken de pie, agachado, en el aire y en diagonal) · `slashA` / `slashB` / `slashC` (combo de espada de 3 golpes) · `cslash` (espadazo agachado) · `aslash` (en el aire) · `guard` (bloqueo) · `hurt` · `die` (sale despedido) · `dieSlash` (se desploma tras un corte) · `magic` (ninjutsu)
 
 ### Matón
 `idle` (guardia de boxeo) · `walk` · `punch` (directo) · `punch2` (cruzado) · `taunt` (se burla cuando caes) · `hurt` · `die` · `dieSlash`
